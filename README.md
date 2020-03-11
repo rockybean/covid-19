@@ -1,6 +1,7 @@
 Name
 ====
-covid-19 @ Kibana
+Covid-19 @ Kibana
+
 Let's analyze covid-19 outbreak in Elastic Stack!
 
 
@@ -18,7 +19,7 @@ Table of Contents
 Dashboard
 ======
 Final Kibana Dashboard is as below:
-![](https://cdn.nlark.com/yuque/0/2020/png/113753/1583931944219-f5031ece-3d6e-4e16-bb86-252affd35dd6.png?x-oss-process=image/resize,w_1492)
+![](https://cdn.nlark.com/yuque/0/2020/png/113753/1583931944219-f5031ece-3d6e-4e16-bb86-252affd35dd6.png)
 
 
 Architecture
