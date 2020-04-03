@@ -38,6 +38,10 @@ Requirements
 
 Usage
 =====
+
+> This script can only download latest data now because the api server has stopped to support 'latest=0' parameter.
+>https://lab.isaaclin.cn/nCoV/en
+
 1. Import covid-19 data
 * Download covid-19.py
 * Run following command
