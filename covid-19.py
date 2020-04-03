@@ -6,10 +6,11 @@ import os
 from elasticsearch import Elasticsearch
 
 def make_id(dict):
+    #print(dict)
     # use date ad part of id to make sure one record per day which is easy to analyze
     time_local = time.localtime(dict['updateTime']/1000)
     dt = time.strftime("%Y-%m-%d",time_local)
-    text='-'.join([dt,dict['continentName'] if 'continentName' in dict else '',dict['countryName'],dict['provinceName'],dict['cityName'] if 'cityName' in dict else '']).encode()
+    text=u'-'.join([dt,dict['continentName'] if 'continentName' in dict else '',dict['countryName'],dict['provinceName'],dict['cityName'] if 'cityName' in dict else '']).encode('utf-8')
     return str(hashlib.md5(text).hexdigest()).lower()
 
 # Init ES
@@ -118,7 +119,7 @@ print("Finish request! Time %d s" %(response.elapsed.total_seconds()))
 
 print("Decode to json......")
 response_json = json.loads(response.text)
-
+print("Succeed to decode to json......")
 #print(response_json)
 
 data_ids=[]
